@@ -100,31 +100,57 @@ const questions = [
  
     ]
 
-// // function to initialize program
-const init = (AnsData) => {
-    // If there's is none, create one
-	if (!AnsData) {
-		AnsData = [];
-	}
-    return inquirer.prompt(questions)
-    .then(answers => {
-        console.log(answers);
-        AnsData.push(answers);
-        console.log(AnsData);
-        })
-}
+// // // function to initialize program
+// const init = (AnsData) => {
+//     // If there's is none, create one
+// 	if (!AnsData) {
+// 		AnsData = [];
+// 	}
+//     return inquirer.prompt(questions)
+//     .then(answers => {
+//         console.log(answers);
+//         AnsData.push(answers);
+//         //console.log(AnsData);
+//         })
+// }
 
-// // function call to initialize program
-init()
-.then(AnsData => {
-return generateMarkdown(AnsData);
-})
-.then((fileName, data) => {
-    return writeToFile(fileName, data);
-})
-.then(writeFileResponse => {
-    console.log(writeFileResponse)
-})
-.catch(err => {
-    console.log(err);
-  });
+// // // function call to initialize program
+// init()
+// .then(AnsData => {
+// return generateMarkdown(AnsData);
+// })
+// .then((fileName, data) => {
+//     return writeToFile(fileName, data);
+// })
+// .then(writeFileResponse => {
+//     console.log(writeFileResponse)
+// })
+// .catch(err => {
+//     console.log(err);
+//   });
+
+//===================================================================
+
+// const init = () => {
+//     return inquirer.prompt(questions)
+//     .then(ans => {
+//         console.log(ans);
+//     })
+// }
+// init()
+//     .then(ans => {
+//          const pageHTML = generateMarkdown(ans);
+
+//         fs.writeFile('readMe.md', pageHTML, err => {
+//                 if(err) throw new Error(err);
+//                  console.log('Page Created! Checkout index.html to see the output!');
+//         });
+//     });
+
+function init() {
+    inquirer.prompt(questions).then((inquirerResponses) => {
+      writeToFile("README.md", generateMarkdown({ ...inquirerResponses }));
+    })
+  }
+  init();
+
