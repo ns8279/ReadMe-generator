@@ -95,7 +95,7 @@ const questions = [
         {
             type: 'input',
             name: 'contributors',
-            message: 'What does the user need to know about contributing to the repo?',
+            message: 'Who are the Contributors for the Application?',
         },  
  
     ]
