@@ -1,48 +1,32 @@
 
-  # ReadMe Generator
-  ![Github license](Apache)
-
-  ## Description
-    A Simple app to generate ReadMe
+  # n
+  ![Github licence](http://img.shields.io/badge/license-ISC-blue.svg)
   
+  ## Description
+  n
+
   ## Table of Contents
-    * [Installation](#installation)
-    
-    * [Usage](#usage)
-
-    * [License](#license)
-
-    * [Contributors](#contributors)
-
-    * [Tests](#tests)
-
-    * [Questions] (#questions)
-
-  ## Installation <a name="installation"></a>
-
-  To Install necessary dependencies, run the following command:
-
-      npm init
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [License](#license)
+  * [Contributing](#contributing)
+  * [Tests](#tests)
+  * [Questions](#questions)
+  
+  ## Installation 
+      n
 
   ## Usage
-  
-  Generate ReadMe
-
+  n
+   
   ## License
+  This project is licensed under the ISC.
 
-  This project is licensed under then Apache license
-
-  ## Contributors
-
-  The contributors of the Application: Nirupama
+  ## Contributing
+  undefined
 
   ## Tests
+      n
 
-      NA
-  
   ## Questions
-
-  If you have any questions about the application, please reach out to me @ 
-
-  nirupama.2308@gmail.com
-   
+  If you have any questions about the application, contact me directly at n. My Github is https://github.com/n.

@@ -70,7 +70,7 @@ const questions = [
             type: 'list',
             name: 'license',
             message: 'Whhich license do you wish to use?',
-            choices: ['MIT', 'ISC', 'Apache', 'postgresql']
+            choices: ['MIT http://img.shields.io/badge/license-MIT-blue.svg', 'ISC', 'Apache', 'postgresql']
         },
 
         {
