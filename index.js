@@ -4,7 +4,7 @@ const inquirer = require('inquirer');
 
 //importing the files from different folders which contains file generations and creation of a promise
 const generateMarkdown = require('./utils/generateMarkdown.js');
-const { writeToFile } = require('./utils/generate-promise.js');// genearte-promise 
+//const { writeToFile } = require('./utils/generate-promise.js');// genearte-promise 
 
 
 // array of questions for user
@@ -70,7 +70,7 @@ const questions = [
             type: 'list',
             name: 'license',
             message: 'Whhich license do you wish to use?',
-            choices: ['MIT http://img.shields.io/badge/license-MIT-blue.svg', 'ISC', 'Apache', 'postgresql']
+            choices: ['MIT', 'ISC', 'Apache', 'postgresql']
         },
 
         {
@@ -100,57 +100,30 @@ const questions = [
  
     ]
 
-// // // function to initialize program
-// const init = (AnsData) => {
-//     // If there's is none, create one
-// 	if (!AnsData) {
-// 		AnsData = [];
-// 	}
-//     return inquirer.prompt(questions)
-//     .then(answers => {
-//         console.log(answers);
-//         AnsData.push(answers);
-//         //console.log(AnsData);
-//         })
-// }
 
-// // // function call to initialize program
-// init()
-// .then(AnsData => {
-// return generateMarkdown(AnsData);
-// })
-// .then((fileName, data) => {
-//     return writeToFile(fileName, data);
-// })
-// .then(writeFileResponse => {
-//     console.log(writeFileResponse)
-// })
-// .catch(err => {
-//     console.log(err);
-//   });
+const init = () => {
+    return inquirer.prompt(questions)
+    // .then(ans => {
+    //     console.log(ans);
+    //     generateMarkdown(ans);
+    // })
+    
+}
+init()
+    .then(ans => {
+         const read = generateMarkdown(ans);
+            console.log(ans);
+        fs.writeFile('readMe.md', read, err => {
+                if(err) throw new Error(err);
+                 console.log('ReadMe created!');
+        });
+    });
 
-//===================================================================
-
-// const init = () => {
-//     return inquirer.prompt(questions)
-//     .then(ans => {
-//         console.log(ans);
+//TA solution to initialize
+// function init() {
+//     inquirer.prompt(questions).then((inquirerResponses) => {
+//       writeToFile("README.md", generateMarkdown({ ...inquirerResponses }));
 //     })
 // }
-// init()
-//     .then(ans => {
-//          const pageHTML = generateMarkdown(ans);
-
-//         fs.writeFile('readMe.md', pageHTML, err => {
-//                 if(err) throw new Error(err);
-//                  console.log('Page Created! Checkout index.html to see the output!');
-//         });
-//     });
-
-function init() {
-    inquirer.prompt(questions).then((inquirerResponses) => {
-      writeToFile("README.md", generateMarkdown({ ...inquirerResponses }));
-    })
-  }
-  init();
+// init();
 

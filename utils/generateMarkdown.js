@@ -14,6 +14,7 @@ function generateMarkdown(data) {
   * [License](#license)
   * [Contributing](#contributing)
   * [Tests](#tests)
+  * [Video](#video)
   * [Questions](#questions)
   
   ## Installation 
@@ -26,10 +27,14 @@ function generateMarkdown(data) {
   This project is licensed under the ${data.license}.
 
   ## Contributing
-  ${data.contribution}
+  ${data.contributors}
 
   ## Tests
       ${data.test}
+  
+  ## Video
+  The video on how to test this application is included here: 
+  [Walk-through Video]()
 
   ## Questions
   If you have any questions about the application, contact me directly at ${data.email}. My Github is https://github.com/${data.github}.
