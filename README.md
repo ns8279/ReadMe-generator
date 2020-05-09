@@ -1,9 +1,9 @@
 
-  # Professional README generator
+  # Professional ReadMe Generator
   ![Github licence](http://img.shields.io/badge/license-MIT-blue.svg)
   
   ## Description
-  A Simple app which generates professional readme with user inputs
+  A Simple app which generates professional readme with user inputs and using node js
 
   ## Table of Contents
   * [Installation](#installation)
@@ -11,14 +11,13 @@
   * [License](#license)
   * [Contributing](#contributing)
   * [Tests](#tests)
-  * [Video](#video)
   * [Questions](#questions)
   
   ## Installation 
-      npm init
+      npm init 
 
   ## Usage
-  This app is useful for people who are looking to develop a professional readme for their Github projects
+  To generate a professional ReadMe for your projects
    
   ## License
   This project is licensed under the MIT.
@@ -27,11 +26,7 @@
   Nirupama Sundararaman
 
   ## Tests
-      There are no commands, just installing the right packages should make the app work
+      The video on how to test this application is included here:[Walk-through Video]()
   
-  ## Video
-  The video on how to test this application is included here: 
-  [Walk-through Video]()
-
   ## Questions
   If you have any questions about the application, contact me directly at nirupama.2308@gmail.com. My Github is https://github.com/ns8279.
