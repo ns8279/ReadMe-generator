@@ -29,7 +29,7 @@ function generateMarkdown(data) {
   ${data.contributors}
 
   ## Tests
-      The video on how to test this application is included here:[Walk-through Video]()
+      The video on how to test this application is included here:[Walk-through Video](https://drive.google.com/file/d/1_3j0q2h74klz98xjd9AOwFKLybaMwIps/view)
   
   ## Questions
   If you have any questions about the application, contact me directly at ${data.email}. My Github is https://github.com/${data.github}.
